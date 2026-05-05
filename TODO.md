@@ -3,8 +3,9 @@
 Welcome! Your goal is to build out the missing pieces of our Internal Task Tracker. The core plumbing is set up, but the actual features are stubbed out.
 
 ## 🛠️ The Workflow (Rules of Engagement)
-- **Single Branch/Hero Development**: You will work on an isolated branch off `main`.
-- **Rebase, Don't Merge**: Keep your history clean. Rebase against `main` frequently.
+- **Fork & Branch**: Fork this repo, clone your fork, and work on a branch (e.g., `intern/task-tracker`).
+- **Upstream Sync**: Add the original repo as `upstream`. Rebase against `upstream/main` frequently to stay up to date.
+- **PR for Review**: Push your branch to your fork and open a Pull Request when ready for review.
 - **Self-Guided**: Watch the recommended videos, read the code, and figure out how the pieces connect.
 
 ---
@@ -19,12 +20,14 @@ Welcome! Your goal is to build out the missing pieces of our Internal Task Track
 - [ ] YouTube: *"Docker Compose Crash Course"*
 
 ### ✅ Tasks
-- [ ] Clone the monorepo and checkout a new branch (e.g., `intern/task-tracker`).
+- [ ] **Fork** this repo on GitHub, then **clone your fork**: `git clone https://github.com/<your-username>/inter-se-training.git`
+- [ ] Add the original repo as upstream: `git remote add upstream https://github.com/SolveServeSolution/inter-se-training.git`
+- [ ] Checkout a new branch: `git checkout -b intern/task-tracker`
 - [ ] Copy `.env.example` to `.env`.
 - [ ] Run `docker compose up -d` to start the PostgreSQL database.
 - [ ] Run `npm install` at the root.
 - [ ] Start the apps: `npm run dev:api` and `npm run dev:web`.
-- [ ] **Git Practice**: Make a dummy commit, switch to `main`, make another commit, switch back, and run `git rebase -i main`. Resolve any conflicts.
+- [ ] **Git Practice**: Make a dummy commit on your branch, then run `git fetch upstream && git rebase upstream/main`. Push your branch to your fork and open a Pull Request against the original repo.
 
 ---
 
@@ -82,4 +85,4 @@ Welcome! Your goal is to build out the missing pieces of our Internal Task Track
 - [ ] **The Ticket**: Implement the "Close Task" feature.
 - [ ] **Backend**: Update the `PATCH /tasks/:id/status` endpoint in NestJS to update a task's status in the database.
 - [ ] **Frontend**: Add a "Mark as Done" button next to each task in the UI. Wire it to hit the `PATCH` endpoint and update the UI state.
-- [ ] **Workflow**: Ensure your code is clean. Fetch the latest `main`, rebase your branch on top of it, and push a clean commit for review.
+- [ ] **Workflow**: Ensure your code is clean. Fetch the latest upstream changes (`git fetch upstream && git rebase upstream/main`), resolve any conflicts, and push to your fork. Open a Pull Request for review.

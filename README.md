@@ -13,22 +13,28 @@ A monorepo training project for building an internal task/ticket tracker.
 ## Getting Started
 
 ```bash
-# 1. Install dependencies
+# 1. Fork this repo on GitHub, then clone your fork
+git clone https://github.com/<your-username>/inter-se-training.git
+
+# 2. Add the original repo as upstream
+git remote add upstream https://github.com/SolveServeSolution/inter-se-training.git
+
+# 3. Install dependencies
 npm install
 
-# 2. Copy environment variables
+# 4. Copy environment variables
 cp .env.example .env
 
-# 3. Start PostgreSQL
+# 5. Start PostgreSQL
 docker compose up -d
 
-# 4. Push database schema (creates tables)
+# 6. Push database schema (creates tables)
 npm run db:push
 
-# 5. Start the API (port 4000)
+# 7. Start the API (port 4000)
 npm run dev:api
 
-# 6. Start the web app (port 3000) — in a separate terminal
+# 8. Start the web app (port 3000) — in a separate terminal
 npm run dev:web
 ```
 
