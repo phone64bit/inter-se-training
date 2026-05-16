@@ -13,5 +13,16 @@
     "dev:api": "npm run start:dev --workspace=apps/api",
     "dev:web": "npm run dev --workspace=apps/web",
     "build": "npm run build --workspace=packages/database && npm run build --workspace=apps/api && npm run build --workspace=apps/web"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^9.0.1",
+    "@nestjs/common": "^11.1.21",
+    "@nestjs/core": "^11.1.21",
+    "@nestjs/platform-express": "^11.1.21",
+    "@thallesp/nestjs-better-auth": "^2.6.0",
+    "axios": "^1.16.1",
+    "npm-check-updates": "^22.2.0"
   }
 }

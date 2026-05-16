@@ -5,7 +5,12 @@
     "rootDir": "./src",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "paths": {
+      "@intern-training/*": [
+        "../../../../packages/*"
+      ]
+    }
   },
   "include": ["src/**/*"]
 }
